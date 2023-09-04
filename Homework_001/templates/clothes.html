@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ super() }} - {{ title }}
+{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-center ps-2 pe-2 gap-3">
+    {% for cloth in cloth_list%}
+    <div class="card" style="width: 18rem;">
+        <img src="{{cloth.picture}}" class="card-img-top img-responsive" height=300vh alt="{{cloth.title}}">
+        <div class="card-body">
+            <h5 class="card-title">{{cloth.title}}</h5>
+            <p class="card-text">{{cloth.description}}</p>
+            <a href="#" class="btn btn-primary">Подробнее</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
