@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ super() }}
+{% endblock %}
+{% block content %}
+<form action="{{url_for('task1_post', name=text)}}" method="post">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Введите ваше имя</label>
+        <input type="text" name="name" class="form-control" id="exampleInputEmail1"
+               aria-describedby="emailHelp">
+    </div>
+    <button type="submit" class="btn btn-primary">Нажми меня</button>
+</form>
+{% endblock %}
